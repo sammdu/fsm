@@ -131,7 +131,9 @@ function updateMode() {
 function leavingEdges(node) {
 	var edges = [];
 	for(var i = 0; i < links.length; i++) {
-		if(links[i].nodeA == node || (!links[i].directed && links[i].nodeB == node)) {
+		var nodeACheck = links[i].nodeA == node;
+		var nodeBCheck = (!links[i].directed) && links[i].nodeB == node;
+		if(nodeACheck || nodeBCheck) {
 			edges.push(links[i]);
 		}
 	}
@@ -324,12 +326,12 @@ window.onload = function() {
 			var currentObject = selectObject(mouse.x, mouse.y);
 			if (currentObject != null) {
 				if (currentObject instanceof Node) {
+					var chipsToFireAway = 0;
+					// Look for edges to adjacent nodes
 					var modifier = 1;
 					if (shift) {
 						modifier = -1;
 					}
-					var chipsToFireAway = 0;
-					// Look for edges to adjacent nodes
 					var edges = leavingEdges(currentObject);
 					for (var i = 0; i < edges.length; i++) {
 						var edge = edges[i];

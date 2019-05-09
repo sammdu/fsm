@@ -106,6 +106,7 @@ var links = [];
 var cursorVisible = true;
 var snapToPadding = 6; // pixels
 var hitTargetPadding = 6; // pixels
+var gridSnapPadding = 30; // pixels
 var selectedObject = null; // either a Link or a Node
 var currentLink = null; // a Link
 var movingObject = false;
@@ -254,15 +255,23 @@ function selectObject(x, y) {
 }
 
 function snapNode(node) {
-	for(var i = 0; i < nodes.length; i++) {
-		if(nodes[i] == node) continue;
+	var element = document.getElementById('gridsnap');
+	var gridSnap = element.checked;
+	if (gridSnap) {
+		node.x = (node.x + Math.floor(gridSnapPadding / 2)) - (node.x % gridSnapPadding);
+		node.y = (node.y + Math.floor(gridSnapPadding / 2)) - (node.y % gridSnapPadding);
+	}
+	else {
+		for(var i = 0; i < nodes.length; i++) {
+			if(nodes[i] == node) continue;
 
-		if(Math.abs(node.x - nodes[i].x) < snapToPadding) {
-			node.x = nodes[i].x;
-		}
+			if(Math.abs(node.x - nodes[i].x) < snapToPadding) {
+				node.x = nodes[i].x;
+			}
 
-		if(Math.abs(node.y - nodes[i].y) < snapToPadding) {
-			node.y = nodes[i].y;
+			if(Math.abs(node.y - nodes[i].y) < snapToPadding) {
+				node.y = nodes[i].y;
+			}
 		}
 	}
 }

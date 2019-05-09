@@ -258,8 +258,10 @@ function snapNode(node) {
 	var element = document.getElementById('gridsnap');
 	var gridSnap = element.checked;
 	if (gridSnap) {
-		node.x = (node.x + Math.floor(gridSnapPadding / 2)) - (node.x % gridSnapPadding);
-		node.y = (node.y + Math.floor(gridSnapPadding / 2)) - (node.y % gridSnapPadding);
+		var xTemp = (node.x + Math.floor(gridSnapPadding / 2));
+		var yTemp = (node.y + Math.floor(gridSnapPadding / 2));
+		node.x = xTemp - (xTemp % gridSnapPadding);
+		node.y = yTemp - (yTemp % gridSnapPadding);
 	}
 	else {
 		for(var i = 0; i < nodes.length; i++) {

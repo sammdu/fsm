@@ -324,6 +324,10 @@ window.onload = function() {
 			var currentObject = selectObject(mouse.x, mouse.y);
 			if (currentObject != null) {
 				if (currentObject instanceof Node) {
+					var modifier = 1;
+					if (shift) {
+						modifier = -1;
+					}
 					var chipsToFireAway = 0;
 					// Look for edges to adjacent nodes
 					var edges = leavingEdges(currentObject);
@@ -338,9 +342,9 @@ window.onload = function() {
 							edgeWeight = parseInt(edge.text);
 						}
 						chipsToFireAway += edgeWeight;
-						incrementNode(otherNode, edgeWeight);
+						incrementNode(otherNode, edgeWeight * modifier);
 					}
-					incrementNode(currentObject, -chipsToFireAway)
+					incrementNode(currentObject, -chipsToFireAway * modifier)
 				}
 			}
 		}

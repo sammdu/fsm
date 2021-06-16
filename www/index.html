@@ -1,20 +1,28 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
 	<title>Finite State Machine and Graph Designer</title>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
+		html
+		{
+			margin: 0 0;
+			padding: 0 0;
+		}
 		body
 		{
 			text-align: center;
-			background: #f8fbff;
-			margin: 0 30px 100px 30px;
+			background: #f6faff;
+			margin: 0 0;
+			padding: 0 0;
 			font-family: 'Ubuntu', 'Segoe UI', sans-serif;
 		}
 
 		h1
 		{
+			color: #073042;
 			font-size: 2.5em;
 		}
 
@@ -26,12 +34,12 @@
 			margin: 2.5rem auto;
 			background: white;
 			border-radius: 1rem;
-			box-shadow: 0 0.2rem 1.5rem 0 rgba(0, 0, 0, 0.3);
+			box-shadow: 0 0.2rem 1.4rem 0 rgba(0, 0, 0, 0.2);
 		}
 
 		a
 		{
-			color: black;
+			color: #1a73e8;
 		}
 
 		a:hover
@@ -39,11 +47,30 @@
 			text-decoration: none;
 		}
 
-		div,footer
+		div
 		{
 			margin: 30px auto;
+			padding: 0 2rem;
 			text-align: left;
 			max-width: 800px;
+		}
+
+		footer div
+		{
+			margin: 0 auto;
+		}
+
+		footer a
+		{
+			/* color: inherit; */
+			color: #eff7cf;
+		}
+
+		footer
+		{
+			background-color: #073042;
+			color: #ffffff;
+			padding: 2rem 0;
 		}
 
 		.error
@@ -94,7 +121,7 @@
 
 		button
 		{
-			padding: 0.5rem 0.8rem;
+			padding: 0.8rem 1rem;
 			margin: 0 0.5rem;
 			border: none;
 			border-radius: 10rem;
@@ -219,22 +246,27 @@
 		</article>
 	</div>
 	<footer>
-		<h2>Changelog and attributions:</h2>
-		<ul>
-			<li>Update by <a href="https://sammdu.com" target="_blank">Samm Du</a> in 2021;</li>
-			<li>Update by <a href="https://wilsonem.github.io/" target="_blank">Emily Wilson</a> in 2020;
-				<a href="https://wilsonem.github.io/fsm/" target="_blank">Visit here</a>
-			</li>
-			<li>Update by <a href="https://markusfeng.com" target="_blank">Markus Feng</a> in 2019;
-				<a href="https://markusfeng.com/projects/graph/" target="_blank">Visit here</a>
-			</li>
-			<li>Update by <a href="http://samuelgreen.org/" target="_blank">Samuel Green</a> in 2015;
-				<a href="http://sa.muel.green/fsm/" target="_blank">Visit here</a>
-			</li>
-			<li>Original by <a href="http://madebyevan.com/" target="_blank">Evan Wallace</a> in 2010;
-				<a href="http://madebyevan.com/fsm/" target="_blank">Visit here</a>
-			</li>
-		</ul>
+		<div>
+			<h2>Changelog and attributions:</h2>
+			<ul>
+				<li>Update by <a href="https://sammdu.com" target="_blank">Samm Du</a> in 2021;</li>
+				<li>Update by <a href="https://wilsonem.github.io/" target="_blank">Emily Wilson</a> in 2020;
+					<a href="https://wilsonem.github.io/fsm/" target="_blank">Visit here</a>
+				</li>
+				<li>Update by <a href="https://markusfeng.com" target="_blank">Markus Feng</a> in 2019;
+					<a href="https://markusfeng.com/projects/graph/" target="_blank">Visit here</a>
+				</li>
+				<li>Update by <a href="http://samuelgreen.org/" target="_blank">Samuel Green</a> in 2015;
+					<a href="http://sa.muel.green/fsm/" target="_blank">Visit here</a>
+				</li>
+				<li>Original by <a href="http://madebyevan.com/" target="_blank">Evan Wallace</a> in 2010;
+					<a href="http://madebyevan.com/fsm/" target="_blank">Visit here</a>
+				</li>
+			</ul>
+			<p>The Finite State Machine and Graph Designer is released under the
+				<a href="https://github.com/sammdu/fsm/blob/master/LICENSE" target="_blank">MIT License</a>.
+			</p>
+		</div>
 	</footer>
 </body>
 

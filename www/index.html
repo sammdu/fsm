@@ -2,13 +2,13 @@
 <html>
 
 <head>
-	<title>Graph / Finite State Machine Designer</title>
+	<title>Finite State Machine and Graph Designer</title>
 	<meta charset="utf-8">
 	<style>
 		body
 		{
 			text-align: center;
-			background: #bbdcff;
+			background: #aad3ff;
 			margin: 0 30px 100px 30px;
 			font-family: 'Ubuntu', 'Segoe UI', sans-serif;
 		}
@@ -57,8 +57,13 @@
 
 		p
 		{
-			margin: 30px 0;
-			line-height: 20px;
+			margin: 1em 0;
+			line-height: 1.5em;
+		}
+
+		ul
+		{
+			line-height: 1.5em;
 		}
 
 		.center
@@ -89,94 +94,6 @@
 		button
 		{
 			padding: 0.5em 0.8em;
-		}
-
-		.onoffswitch
-		{
-			position: relative;
-			width: 90px;
-			-webkit-user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-		}
-
-		.onoffswitch-checkbox
-		{
-			display: none;
-		}
-
-		.onoffswitch-label
-		{
-			display: block;
-			overflow: hidden;
-			cursor: pointer;
-			border: 2px solid #999999;
-			border-radius: 20px;
-		}
-
-		.onoffswitch-inner
-		{
-			display: block;
-			width: 200%;
-			margin-left: -100%;
-			transition: margin 0.3s ease-in 0s;
-		}
-
-		.onoffswitch-inner:before,
-		.onoffswitch-inner:after
-		{
-			display: block;
-			float: left;
-			width: 50%;
-			height: 30px;
-			padding: 0;
-			line-height: 30px;
-			font-size: 14px;
-			color: white;
-			font-weight: bold;
-			box-sizing: border-box;
-		}
-
-		.onoffswitch-inner:before
-		{
-			content: "ON";
-			padding-left: 10px;
-			background-color: #34A7C1;
-			color: #FFFFFF;
-		}
-
-		.onoffswitch-inner:after
-		{
-			content: "OFF";
-			padding-right: 10px;
-			background-color: #EEEEEE;
-			color: #999999;
-			text-align: right;
-		}
-
-		.onoffswitch-switch
-		{
-			display: inline;
-			width: 18px;
-			margin: 6px;
-			background: #FFFFFF;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 56px;
-			border: 2px solid #999999;
-			border-radius: 20px;
-			transition: all 0.3s ease-in 0s;
-		}
-
-		.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-inner
-		{
-			margin-left: 0;
-		}
-
-		.onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch
-		{
-			right: 0px;
 		}
 	</style>
 	<script src="fsm.js"></script>
@@ -220,7 +137,7 @@
 </head>
 
 <body>
-	<h1>Graph / Finite State Machine Designer</h1>
+	<h1>Finite State Machine and Graph Designer</h1>
 	<div class="center">
 		<input type="checkbox" id="directed" checked="true"> Directed Edges
 		<input type="checkbox" id="gridsnap" checked="true"> Snap to Grid
@@ -244,7 +161,8 @@
 		<textarea id="output"></textarea>
 		<p class="center"><button id="importButton" hidden>Import</button></p>
 		<article>
-			<p>The big white box above is the FSM designer.&nbsp; Here's how to use it:</p>
+			<h2>Usage instructions:</h2>
+			<p>The big white box above is the FSM designer.</p>
 			<ul>
 				<li><b>Add a state:</b> double-click on the canvas</li>
 				<li><b>Add an arrow:</b> shift-drag on the canvas</li>
@@ -261,21 +179,15 @@
 				<li><b>Move something:</b> drag it around</li>
 				<li><b>Label something:</b> click on a state or arrow</li>
 				<li>
-					<b>Delete something:</b> click it and press the delete key OR press
-					shift-backspace
-					<ul>
-						<li>Mac users can also delete using fn-backspace</li>
-					</ul>
+					<b>Delete something:</b> click it and press the delete key
 				</li>
-			</ul>
-			<ul>
 				<li><b>Make accept state:</b> double-click on an existing state</li>
 				<li>
 					<b>Type numeric subscript:</b> put an underscore before the number
 					(like "S_0")
 				</li>
 				<li>
-					<b>Type greek letter:</b> put a backslash before it (like "beta")
+					<b>Type greek letter:</b> put a backslash before it (like "\beta")
 				</li>
 			</ul>
 			<p>This also includes functionality used for simulating chip-firing games. When in chip firing mode, the following happen:</p>
@@ -286,10 +198,10 @@
 				<li>Empty vertices are treated as having zero chips on them</li>
 				<li>An edge with a numerical label indicates the "weight" of the edge, causing that many chips to be fired along that edge instead of only one</li>
 			</ul>
-			<p>This was made in HTML5 and JavaScript using the canvas element.</p>
 		</article>
 	</div>
 	<footer>
+		<h2>Changelog and attributions:</h2>
 		<ul>
 			<li>Update by <a href="https://sammdu.com" target="_blank">Samm Du</a> in 2021;</li>
 			<li>Update by <a href="https://wilsonem.github.io/" target="_blank">Emily Wilson</a> in 2020;

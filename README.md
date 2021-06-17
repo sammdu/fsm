@@ -9,5 +9,4 @@
 * Update by [Samuel Green](https://sa.muel.green/) in 2015; [Visit here](https://sa.muel.green/fsm/)
 * Original by [Evan Wallace](http://madebyevan.com/) in 2010; [Visit here](http://madebyevan.com/fsm/)
 
-
 The Finite State Machine and Graph Designer is released under the [MIT License](https://github.com/sammdu/fsm/blob/master/LICENSE).

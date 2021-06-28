@@ -9,4 +9,4 @@
 * Update by [Samuel Green](https://sa.muel.green/) in 2015 &middot; [Live webpage](https://sa.muel.green/fsm/) &middot; [GitHub](https://github.com/greensam/fsm)
 * Original by [Evan Wallace](http://madebyevan.com/) in 2015 &middot; [Live webpage](http://madebyevan.com/fsm/) &middot; [GitHub](https://github.com/evanw/fsm)
 
-The Finite State Machine and Graph Designer is released under the [MIT License](https://github.com/sammdu/fsm/blob/master/LICENSE).https://github.com/nomoid/fsm
+The Finite State Machine and Graph Designer is released under the [MIT License](https://github.com/sammdu/fsm/blob/master/LICENSE).

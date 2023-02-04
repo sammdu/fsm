@@ -2,6 +2,9 @@
 
 ### [Click here to use the app!](https://sammdu.gitlab.io/fsm/)
 
+![screenshot](https://user-images.githubusercontent.com/10665890/216784456-dc35f0e0-5525-4646-98ad-6277e4cc086c.png)
+
+
 ## Changelog and attributions:
 * Update by [Samm Du](https://sammdu.com/) in 2021 &middot; [Live webpage](https://sammdu.gitlab.io/fsm/) &middot; [GitHub](https://github.com/sammdu/fsm) | [GitLab](https://gitlab.com/sammdu/fsm)
 * Update by [Emily Wilson](https://wilsonem.github.io/) in 2020 &middot; [Live webpage](https://wilsonem.github.io/fsm/) &middot; [GitHub](https://github.com/wilsonem/fsm)
